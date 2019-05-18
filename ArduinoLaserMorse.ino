@@ -25,8 +25,8 @@ void setup() {
   m = Morse(PIN_LED_LASER);
   
   // setup the on/off leds
-  ledOff = Led(PIN_LED_START);
-  ledOn = Led(PIN_LED_STOP);
+  ledOff = Led(PIN_LED_STOP);
+  ledOn = Led(PIN_LED_START);
 
   // setup the buttons
   pinMode(PIN_BTN_1, INPUT);
