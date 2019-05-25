@@ -61,13 +61,13 @@ void loop() {
 
     // listen for message buttons
     if(digitalRead(PIN_BTN_1)) {  
-      m.play("UPT");
+      m.play("upt");
     }
     else if(digitalRead(PIN_BTN_2)) {
-      m.play("AC");
+      m.play("ac");
     }
-    else if(digitalRead(PIN_BTN_3)) {    
-      m.play("CTI");
+    else if(digitalRead(PIN_BTN_3)) { 
+      m.play("hello there");
     }
   }
 }

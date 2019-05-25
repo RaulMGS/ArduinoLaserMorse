@@ -4,6 +4,9 @@ Morse::Morse(){
 }
 Morse::Morse(byte laserpin){
   laserComponent = Led(laserpin);
+  
+  // set the pinmode of the laser
+  pinMode(laserpin, OUTPUT);
 }
 void Morse::dot(){
   laserComponent.toggle(HIGH);
@@ -46,6 +49,7 @@ void Morse::play(char c){
   else if(c == 'z'){ dot(); line(); line(); dot(); dot();}
 }
 void Morse::play(String str){
+  Serial.print(str + "\n");
   for(int i=0;i<str.length();i++){
     play(str.charAt(i));
   }
